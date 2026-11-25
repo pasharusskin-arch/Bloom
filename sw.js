@@ -1,7 +1,8 @@
-const CACHE='bloom-shell-v3301';
+const CACHE='bloom-shell-v3302';
 const ROOT=self.registration.scope;
 const SHELL=['','index.html','css/styles.css','js/app.js','manifest.webmanifest','bloom-icon.png','bloom-apple-icon.png'].map(p=>new URL(p,ROOT).href);
-self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(SHELL.map(u=>new Request(u,{cache:'reload'})));await self.skipWaiting();})()));
+const ART=["aeri.webp","astra.webp","cosmi.webp","crystal.webp","ember.webp","flora.webp","fungi.webp","lumi.webp","miko.webp","mossi.webp","neri.webp","nox.webp","oli.webp","ossi.webp","silva.webp","terra.webp","morning.webp","day.webp","evening.webp","night.webp"].map(p=>new URL(p,ROOT).href);
+self.addEventListener('install',e=>e.waitUntil((async()=>{const c=await caches.open(CACHE);await c.addAll(SHELL.map(u=>new Request(u,{cache:'reload'})));await Promise.allSettled(ART.map(async u=>{const r=await fetch(u,{cache:'reload'});if(r.ok)await c.put(u,r);}));await self.skipWaiting();})()));
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch',e=>{
  const q=e.request,u=new URL(q.url);
@@ -11,7 +12,7 @@ self.addEventListener('fetch',e=>{
  const nav=q.mode==='navigate';
  const key=nav?new URL('index.html',ROOT).href:q;
  const cached=await c.match(key);
- if(cached&&(nav||SHELL.includes(u.href)))return cached;
+ if(cached&&(nav||SHELL.includes(u.href)||ART.includes(u.href)))return cached;
  try{const r=await fetch(q,{cache:'no-cache'});if(r.ok){try{await c.put(key,r.clone());}catch{}}return r;}catch{
  return cached||await caches.match(key)|| (nav?await caches.match(new URL('index.html',ROOT).href):null)||Response.error();
  }
