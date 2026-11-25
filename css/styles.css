@@ -93,3 +93,6 @@ html[data-bloom] main button:is(.primary,.active),html[data-bloom] nav button.ac
 html[data-bloom] .daily-checkin .row,html[data-bloom] .daily-evening .row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:10px}
 html[data-bloom] .daily-checkin .row button,html[data-bloom] .daily-evening .row button{min-width:0;padding-inline:0}
 .chest-symbol svg{display:block;margin:auto;filter:drop-shadow(0 5px 12px #e8ce9160)}
+
+/* 4.0.2 navigation */
+#nav,nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}nav button{min-width:0;font-size:11px}button.balance-coins{border:0;padding:7px 12px;border-radius:20px;cursor:pointer}
