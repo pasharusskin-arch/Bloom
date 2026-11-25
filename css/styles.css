@@ -87,3 +87,9 @@ html[data-bloom] input[type=month]{box-sizing:border-box;max-width:100%;min-widt
 
 html[data-bloom] input[type=month]{display:block!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin-inline:0!important;-webkit-appearance:none;appearance:none}
 html[data-bloom] input[type=month]::-webkit-date-and-time-value{min-width:0;text-align:center}
+
+/* BLOOM 3.3.8 */
+html[data-bloom] main button:is(.primary,.active),html[data-bloom] nav button.active{background:var(--at-ink)!important;color:var(--at-card)!important}
+html[data-bloom] .daily-checkin .row,html[data-bloom] .daily-evening .row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:10px}
+html[data-bloom] .daily-checkin .row button,html[data-bloom] .daily-evening .row button{min-width:0;padding-inline:0}
+.chest-symbol svg{display:block;margin:auto;filter:drop-shadow(0 5px 12px #e8ce9160)}
