@@ -1,4 +1,4 @@
-const CACHE='bloom-shell-v3305';
+const CACHE='bloom-shell-v3306';
 const ROOT=self.registration.scope;
 const SHELL=['','index.html','css/styles.css','js/app.js','manifest.webmanifest','bloom-icon.png','bloom-apple-icon.png'].map(p=>new URL(p,ROOT).href);
 const ART=["aeri.webp","astra.webp","cosmi.webp","crystal.webp","ember.webp","flora.webp","fungi.webp","lumi.webp","miko.webp","mossi.webp","neri.webp","nox.webp","oli.webp","ossi.webp","silva.webp","terra.webp","morning.webp","day.webp","evening.webp","night.webp"].map(p=>new URL(p,ROOT).href);
