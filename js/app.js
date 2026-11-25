@@ -5,8 +5,8 @@ function currentOutfit(){return bloomOutfits.find(o=>o.level===S.outfitLevel&&S.
 function chooseOutfit(n){outfitState();if(!S.outfitUnlocked.includes(n)||!bloomOutfits.some(o=>o.level===n))return;S.outfitLevel=n;S.outfitNotices=S.outfitNotices.filter(x=>x!==n);save();render()}
 function dismissOutfit(){S.outfitNotices.shift();save();render()}
 function outfitNotice(){let o=bloomOutfits.find(x=>x.level===S.outfitNotices[0]);return o?'<div class="card outfit-notice" role="status"><small>✧ НОВЫЙ ОБРАЗ ОТКРЫТ</small><h2>'+o.name+'</h2><p>Уровень '+o.level+' · твоя коллекция расцветает.</p><button class="primary" onclick="chooseOutfit('+o.level+');go(\'character\')">Примерить</button> <button onclick="dismissOutfit()">Позже</button></div>':''}
-const bloomSpirits=[['flora','Флора'],['silva','Сильва'],['astra','Астра'],['ember','Эмбер'],['neri','Нери'],['aeri','Аэри'],['miko','Мико'],['crystal','Кристаль'],['terra','Терра'],['oli','Оли'],['fungi','Фунги'],['nox','Нокс'],['mossi','Мосси'],['lumi','Люми'],['ossi','Осси'],['cosmi','Косми']];
-function spirit(){return bloomSpirits.find(x=>x[0]===S.bloomSpirit)||bloomSpirits[0]}
+const bloomSpirits=[['flora','Флора'],['silva','Сильва'],['astra','Астра'],['ember','Эмбер'],['neri','Нери'],['aeri','Аэри'],['miko','Мико'],['crystal','Кристаль'],['terra','Терра'],['oli','Оли'],['fungi','Фунги'],['nox','Нокс'],['mossi','Мосси'],['lumi','Люми'],['ossi','Осси']];
+function spirit(){return bloomSpirits.find(x=>x[0]===S.bloomSpirit)||(S.bloomSpirit==='cosmi'?['cosmi','Косми']:bloomSpirits[0])}
 function chooseSpirit(id){if(!bloomSpirits.some(x=>x[0]===id))return;S.bloomSpirit=id;save();render()}
 function timeTheme(h=new Date().getHours()){return h>=5&&h<11?'morning':h>=11&&h<17?'day':h>=17&&h<22?'evening':'night'}
 function activeTheme(){return ['morning','day','evening','night'].includes(S.bloomTheme)?S.bloomTheme:timeTheme()}
