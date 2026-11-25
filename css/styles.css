@@ -96,3 +96,6 @@ html[data-bloom] .daily-checkin .row button,html[data-bloom] .daily-evening .row
 
 /* 4.0.2 navigation */
 #nav,nav{grid-template-columns:repeat(5,minmax(0,1fr))!important}nav button{min-width:0;font-size:11px}button.balance-coins{border:0;padding:7px 12px;border-radius:20px;cursor:pointer}
+
+/* Compact daily rituals */
+.ritual-panel{margin:12px 0;border:1px solid var(--at-border);border-radius:18px;background:var(--at-card);overflow:hidden}.ritual-panel>summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:5px;padding:16px 38px 16px 16px;position:relative}.ritual-panel>summary::-webkit-details-marker{display:none}.ritual-panel>summary:after{content:'⌄';position:absolute;right:16px;top:16px}.ritual-panel[open]>summary:after{content:'⌃'}.ritual-panel>.card{margin:0;border:0;box-shadow:none}.ritual-panel>.card>h2{display:none}.ritual-panel summary strong{color:var(--at-ink)}.daily-quests>.row{flex-wrap:wrap}.daily-quests>.row button{min-width:0}
