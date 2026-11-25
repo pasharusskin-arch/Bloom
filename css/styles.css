@@ -102,3 +102,6 @@ html[data-bloom] .daily-checkin .row button,html[data-bloom] .daily-evening .row
 
 /* Interactive journal calendar */
 html[data-bloom] .journal-calendar button.journal-date{width:100%;min-width:0;min-height:36px;padding:4px 0;border:1px solid var(--at-border);border-radius:10px;background:var(--at-card);color:var(--at-ink);font-size:13px}html[data-bloom] .journal-calendar button.memory-day{background:var(--at-accent)}html[data-bloom] .journal-calendar button.chapter-day{background:var(--at-accent);font-weight:700}html[data-bloom] .journal-calendar button.selected-day{background:var(--at-ink);color:var(--at-card);outline:2px solid var(--at-ink);outline-offset:1px}.journal-day h3{font-size:15px;margin-top:16px}#memoDate{max-width:100%;min-width:0;box-sizing:border-box}
+
+/* Journey balance controls */
+.balance-sphere{padding:12px 0;border-bottom:1px solid var(--at-border)}.balance-sphere>.row{justify-content:space-between;flex-wrap:wrap;gap:4px}.balance-rating{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin-top:8px}.balance-rating button{min-width:0;min-height:42px;padding:6px}.balance-rating button:disabled{opacity:.75}.character-tabs{flex-wrap:wrap}.character-tabs button{min-width:0}
