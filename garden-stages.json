@@ -1,0 +1,27 @@
+[
+  {
+    "level": 1,
+    "name": "Первые ростки",
+    "image": "garden-level-01.webp"
+  },
+  {
+    "level": 2,
+    "name": "Пробуждение природы",
+    "image": "garden-level-02.webp"
+  },
+  {
+    "level": 4,
+    "name": "Сад гармонии",
+    "image": "garden-level-04.webp"
+  },
+  {
+    "level": 6,
+    "name": "Цветущий оазис",
+    "image": "garden-level-06.webp"
+  },
+  {
+    "level": 9,
+    "name": "Сад вечного цветения",
+    "image": "garden-level-09.webp"
+  }
+]
