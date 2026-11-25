@@ -84,3 +84,6 @@ html[data-bloom] .journal-calendar span:empty{background:transparent!important}
 html[data-bloom] .journal-calendar .chapter-day{background:#dce8d1!important;color:#34472e!important}
 html[data-bloom] .journal-calendar .memory-day{background:#eed8df!important;color:#633e51!important}
 html[data-bloom] input[type=month]{box-sizing:border-box;max-width:100%;min-width:0;width:100%}
+
+html[data-bloom] input[type=month]{display:block!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;min-width:0!important;margin-inline:0!important;-webkit-appearance:none;appearance:none}
+html[data-bloom] input[type=month]::-webkit-date-and-time-value{min-width:0;text-align:center}
