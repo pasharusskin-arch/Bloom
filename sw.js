@@ -1,4 +1,4 @@
-const CACHE='bloom-shell-v5015';
+const CACHE='bloom-shell-v5016';
 const ROOT=self.registration.scope;
 const SHELL=['','index.html','css/styles.css','js/app.js','manifest.webmanifest','bloom-icon.png','bloom-apple-icon.png'].map(p=>new URL(p,ROOT).href);
 const ART=["atlas-cover.webp","atlas-landscape.webp","atlas-paper-texture.webp","atlas-joy-illustration.webp","atlas-chapter-child.webp","atlas-chapter-roots.webp","atlas-chapter-joy.webp","atlas-chapter-values.webp","atlas-chapter-dreams.webp","atlas-chapter-traits.webp","atlas-chapter-wins.webp","atlas-chapter-scars.webp",'languages-design.webp','island-inspiration-design.webp','maze-design.webp','workshop-design.webp','joy-design.webp','harmony-design.webp','port-design.webp','academy-scene.webp','academy-drum.webp',"bloom-world-map.webp","aeri.webp","astra.webp","cosmi.webp","crystal.webp","ember.webp","flora.webp","fungi.webp","lumi.webp","miko.webp","mossi.webp","neri.webp","nox.webp","oli.webp","ossi.webp","silva.webp","terra.webp","morning.webp","day.webp","evening.webp","night.webp"].map(p=>new URL(p,ROOT).href);
