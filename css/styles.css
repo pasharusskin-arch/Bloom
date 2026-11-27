@@ -180,3 +180,26 @@ header #balance,header #balance .balance-coins{background:transparent!important;
 
 /* Compact storybook header controls */
 html[data-bloom] header,header{gap:6px!important}html[data-bloom] header #header-guide,header #header-guide{position:relative;width:44px!important;height:44px!important;min-height:44px!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;font-size:17px!important;font-weight:400!important;display:grid;place-items:center;line-height:1!important}header #header-guide[hidden]{display:none!important}header #header-guide::before{content:"";position:absolute;inset:8px;border:1px solid currentColor;border-radius:50%;opacity:.48;pointer-events:none}html[data-bloom] header #balance,html[data-bloom] header #balance .balance-coins,header #balance,header #balance .balance-coins{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;padding:0!important;min-width:0!important;font-size:17px!important;font-weight:500!important}header #balance::before{content:"";width:24px;height:24px;background:center/contain no-repeat url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cdefs%3E%3CradialGradient%20id%3D%22g%22%20cx%3D%22.32%22%20cy%3D%22.25%22%20r%3D%22.8%22%3E%3Cstop%20stop-color%3D%22%23fff5ce%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23eacb85%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b58a45%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2213%22%20fill%3D%22url(%23g)%22%20stroke%3D%22%23f4dfa5%22%20stroke-width%3D%221%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2210.5%22%20fill%3D%22none%22%20stroke%3D%22%23ad803e%22%20stroke-opacity%3D%22.55%22%20stroke-width%3D%22.8%22%2F%3E%3Cpath%20d%3D%22M16%208Q17%2015%2024%2016Q17%2017%2016%2024Q15%2017%208%2016Q15%2015%2016%208Z%22%20fill%3D%22%23fff5d5%22%20stroke%3D%22%23b48b4b%22%20stroke-width%3D%22.65%22%2F%3E%3C%2Fsvg%3E");filter:drop-shadow(0 0 3px #d9b66b55)}
+
+/* Night theme readability: scoped overrides, preserve illustrated paper and cards */
+html[data-bloom=night]{--at-muted:#D0D3E2;--at-text:var(--at-ink);--surface:var(--at-card);--bloom-focus:#E3C78B}
+html[data-bloom=night] :is(.section-help,.bloom-chat,.bloom-toast,.mapnode,.living-node,.atlas-node,.treasure-tile,.academy-shell,.academy-card){background:var(--at-card)!important;color:var(--at-ink)!important;border-color:var(--at-border)}
+html[data-bloom=night] :is(.world-atlas){background:var(--at-bg);color:var(--at-ink);border-color:var(--at-border)}
+html[data-bloom=night] :is(.academy-shell button,.academy-shell button.academy-collect-card,.quick-links button){background:var(--at-accent)!important;color:var(--at-ink)!important;border-color:var(--at-border)}
+html[data-bloom=night] :is(.atlas-page,.atlas-answer,.self-question,.academy-reel,.chat-bubble,.chat-user,.collect-art){color:#46341f!important}
+html[data-bloom=night] :is(.atlas-page,.atlas-answer,.self-question,.academy-reel,.chat-bubble,.chat-user,.collect-art) :is(h1,h2,h3,h4,label,small,.muted,summary,p,strong,b){color:#46341f!important}
+html[data-bloom=night] .atlas-page :is(input,textarea,select){background:#fff8e8!important;color:#46341f!important;border-color:#967344}
+html[data-bloom=night] .atlas-page button{background:#f8ecd6!important;color:#46341f!important}
+html[data-bloom=night] .atlas-page button:is(.active,.primary){background:#46341f!important;color:#fff8e8!important}
+html[data-bloom=night] .atlas-page button:is(.active,.primary) *{color:inherit!important}
+html[data-bloom=night] :is(button.primary,button.active,.journal-date.selected-day) :is(small,.muted,strong,b,span){color:inherit!important}
+html[data-bloom=night] .academy-shell button:is(.active,.primary){background:var(--at-ink)!important;color:var(--at-bg)!important}
+html[data-bloom=night] .daily-quests>.row>button:first-child{color:var(--at-ink)!important}
+html[data-bloom=night] .done{opacity:1;color:var(--at-muted)}
+html[data-bloom=night] :is(input,textarea)::placeholder{color:var(--at-muted);opacity:1}
+html[data-bloom=night] .atlas-page :is(input,textarea)::placeholder{color:#70563c}
+html[data-bloom=night] .habit-row{border-color:var(--at-border)}
+html[data-bloom=night] .habit-row button[aria-pressed=true]{background:#dce9d9!important;color:#34483d!important}
+html[data-bloom=night] .ritual-shortcuts .ritual-shortcut[aria-expanded=true],html[data-bloom=night] .ritual-shortcuts .ritual-done{background:var(--at-accent)!important;color:var(--at-ink)!important}
+html[data-bloom=night] .ritual-shortcut small{color:inherit!important}
+html[data-bloom=night] .journal-empty>span{color:var(--at-gold)}
