@@ -152,3 +152,17 @@ html[data-bloom] .daily-quests .quest-complete{border-inline-start-color:#83a68b
 html[data-bloom] .daily-quests .quest-complete>button:first-child{background:#dce8d4!important;color:#35483b!important;border-color:#83a68b}
 html[data-bloom] .daily-quests>.row{gap:8px;margin-top:16px}
 html[data-bloom] .daily-quests>.row>button:first-child{flex:1 1 100%;background:var(--at-accent)!important;font-weight:600}
+
+/* World map: readable interactive territory markers */
+html[data-bloom] .painted-map .map-marker{min-height:48px;padding:8px 5px;border:2px solid #b69a60;border-radius:16px;background:linear-gradient(145deg,#fffdf4,#f0e2bf);color:#403425;box-shadow:0 3px 0 #715a3e,0 6px 16px #2c211c70;gap:4px;text-align:center}
+html[data-bloom] .painted-map .map-marker strong{font-weight:750;line-height:1.15;overflow-wrap:anywhere}
+html[data-bloom] .painted-map .map-marker small{color:#5c4933;font-weight:600}
+html[data-bloom] .painted-map .marker-house{border-color:#b58d72}
+html[data-bloom] .painted-map .marker-garden{border-color:#81966e}
+html[data-bloom] .painted-map .marker-forest{border-color:#638d83}
+html[data-bloom] .painted-map .marker-tree{border-color:#c5a45f;background:linear-gradient(145deg,#fff9e6,#f4dca3)}
+html[data-bloom] .painted-map .marker-progress{width:78%;height:5px;background:#d7c6a4}
+html[data-bloom] .painted-map .map-marker:focus-visible{outline:3px solid #fff;outline-offset:3px}
+html[data-bloom] .painted-map .map-marker:active{box-shadow:0 1px 0 #715a3e,0 2px 6px #2c211c70}
+@media(max-width:480px){html[data-bloom] .painted-map .map-marker{padding:5px 3px;gap:3px;font-size:clamp(11px,3.2vw,15px);border-radius:12px}}
+@media(prefers-reduced-motion:reduce){.painted-map .marker-tree{animation:none}}
