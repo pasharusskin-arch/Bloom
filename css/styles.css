@@ -203,3 +203,22 @@ html[data-bloom=night] .habit-row button[aria-pressed=true]{background:#dce9d9!i
 html[data-bloom=night] .ritual-shortcuts .ritual-shortcut[aria-expanded=true],html[data-bloom=night] .ritual-shortcuts .ritual-done{background:var(--at-accent)!important;color:var(--at-ink)!important}
 html[data-bloom=night] .ritual-shortcut small{color:inherit!important}
 html[data-bloom=night] .journal-empty>span{color:var(--at-gold)}
+
+/* Readability across morning, day and evening palettes */
+html[data-bloom=morning]{--at-muted:#665443}
+html[data-bloom=day]{--at-muted:#4B5D4B}
+html[data-bloom=evening]{--at-muted:#483744}
+html[data-bloom]:not([data-bloom=night]){--at-text:var(--at-ink);--surface:var(--at-card)}
+html[data-bloom]:not([data-bloom=night]) :is(.section-help,.bloom-chat,.bloom-toast){background:var(--at-card)!important;color:var(--at-ink)!important;border-color:var(--at-border)}
+html[data-bloom]:not([data-bloom=night]) :is(.atlas-page,.atlas-answer,.self-question,.academy-reel,.chat-bubble,.chat-user,.collect-art) :is(h1,h2,h3,h4,label,small,.muted,summary,p,strong,b){color:#46341f!important}
+html[data-bloom]:not([data-bloom=night]) .atlas-page :is(input,textarea,select){background:#fff8e8!important;color:#46341f!important;border-color:#967344}
+html[data-bloom]:not([data-bloom=night]) .atlas-page button:is(.active,.primary){background:#46341f!important;color:#fff8e8!important}
+html[data-bloom]:not([data-bloom=night]) :is(button.primary,button.active,.journal-date.selected-day) :is(small,.muted,strong,b,span){color:inherit!important}
+html[data-bloom]:not([data-bloom=night]) .daily-quests>.row>button:first-child{color:var(--at-ink)!important}
+html[data-bloom]:not([data-bloom=night]) .done{opacity:1;color:var(--at-muted)}
+html[data-bloom]:not([data-bloom=night]) :is(input,textarea)::placeholder{color:var(--at-muted);opacity:1}
+html[data-bloom]:not([data-bloom=night]) .atlas-page :is(input,textarea)::placeholder{color:#70563c}
+html[data-bloom]:not([data-bloom=night]) .ritual-shortcut small{color:inherit!important}
+html[data-bloom]:not([data-bloom=night]) .academy-shell :is(h1,h2,h3,h4,small,.muted,summary,label){color:#3d4863!important}
+html[data-bloom]:not([data-bloom=night]) .academy-shell button:is(.active,.primary){background:#3d4863!important;color:#fffaf2!important}
+html[data-bloom]:not([data-bloom=night]) .academy-shell button:is(.active,.primary) *{color:inherit!important}
