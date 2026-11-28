@@ -222,3 +222,16 @@ html[data-bloom]:not([data-bloom=night]) .ritual-shortcut small{color:inherit!im
 html[data-bloom]:not([data-bloom=night]) .academy-shell :is(h1,h2,h3,h4,small,.muted,summary,label){color:#3d4863!important}
 html[data-bloom]:not([data-bloom=night]) .academy-shell button:is(.active,.primary){background:#3d4863!important;color:#fffaf2!important}
 html[data-bloom]:not([data-bloom=night]) .academy-shell button:is(.active,.primary) *{color:inherit!important}
+
+/* Statistics retain their illustrated light-paper palette in every theme. */
+html[data-bloom] main .card.bloom-stat-paper{background:#FAF7F0!important;color:#374438!important;border-color:#A9B2A0;--at-ink:#374438;--at-muted:#465244;--at-card:#FAF7F0;--at-accent:#DCE8D3;--at-border:#A9B2A0}
+html[data-bloom] main .bloom-stat-paper :is(h1,h2,h3,h4,label,p,strong,b,small,.muted,summary){color:#374438!important}
+html[data-bloom] main .bloom-stat-paper :is(small,.muted,summary){color:#465244!important}
+html[data-bloom] main .bloom-stat-paper button{color:#374438!important;border-color:#A9B2A0}
+
+html[data-bloom] main .bloom-stat-paper button:not([style*="background:"]){background:#E8EDDF!important}
+html[data-bloom] main .bloom-stat-paper button[style*="background:transparent"]{background:transparent!important}
+html[data-bloom] main .bloom-stat-paper button:is(.active,.primary){background:#374438!important;color:#FAF7F0!important}
+html[data-bloom] main .bloom-stat-paper button:is(.active,.primary) *{color:inherit!important}
+html[data-bloom] main .bloom-stat-paper :is(input,select,textarea){background:#FFFDF8!important;color:#374438!important;border-color:#82917D}
+html[data-bloom] main .bloom-stat-paper button:focus-visible{outline:2px solid #465244;outline-offset:2px}
